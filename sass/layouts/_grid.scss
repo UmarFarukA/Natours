@@ -1,0 +1,26 @@
+.grid {
+  display: grid;
+  margin: 0 auto;
+  max-width: 114rem;
+
+  &-1-col {
+    grid-template-columns: 1fr;
+    column-gap: $gutter-vertical;
+  }
+
+  &-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $gutter-vertical;
+  }
+
+  &-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: $gutter-vertical;
+  }
+
+  &-4-cols {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: $gutter-vertical;
+    transform: skewY(5deg);
+  }
+}

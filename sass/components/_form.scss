@@ -1,0 +1,82 @@
+.form {
+  &__group {
+    margin-bottom: $margin-bottom-medium;
+
+    // &-container {
+    //   display: flex;
+    // }
+  }
+
+  &__input {
+    width: 40%;
+    font-size: 1.2rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem transparent;
+    border: none;
+    display: block;
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-primary;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+  }
+
+  &__label {
+    opacity: 1;
+    display: none;
+  }
+
+  &__radio {
+    // display: inline-block;
+    width: 22%;
+    display: inline-block;
+
+    &-input {
+      display: none;
+    }
+
+    &-label {
+      font-size: 1.8rem;
+      padding-left: 1.2rem;
+      display: flex;
+      align-content: center;
+      gap: 1.2rem;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &-button {
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 5px solid $color-primary;
+
+      &::after {
+        content: "";
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 11%;
+        transform: translate(-50%, -50%);
+        background-color: $color-primary;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+}

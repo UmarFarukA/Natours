@@ -1,0 +1,33 @@
+.features {
+  transition: all 0.8s ease;
+  &__box {
+    background-color: rgba($color-white, 0.8);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    border-radius: 3px;
+
+    &-icon {
+      font-size: 6rem;
+      background-image: linear-gradient(
+        to right,
+        $color-primary-light,
+        $color-primary-dark
+      );
+      display: inline-block;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-top: 1.2rem;
+    }
+
+    &:hover {
+      transform: translateY(-1.3rem) scale(1.03);
+    }
+  }
+
+  // transform: skewY(5deg);
+
+  &__paragraph {
+    font-size: $default-font-size;
+    margin-bottom: $margin-bottom-medium;
+  }
+}
